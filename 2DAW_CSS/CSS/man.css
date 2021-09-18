@@ -1,0 +1,41 @@
+
+body{
+    background-color: #ffa724;
+   
+    border-width: 30px;
+    border-style: groove;
+    border-color: rgb(255, 153, 0);
+}
+
+form{
+    background-color:#c4bdbd;
+    padding: 10px;
+}
+
+input{
+    color:  #d01a1a;
+    text-decoration: none;
+}
+label{
+    text-decoration: none;
+    float: left;
+    color: #772d05; 
+}
+.a{
+    color: #772d05; 
+}
+.b{
+    background-color: #ffa32a; 
+    padding:2%
+}
+.c{
+    color: #772d05; 
+}
+.d{
+    background-color: #ffa724;
+    padding:2%
+}
+.s{
+    background-color: #ffa724;
+    color: #772d05;
+}

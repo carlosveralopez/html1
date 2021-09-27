@@ -1,0 +1,61 @@
+
+            
+            p {
+                
+                color: #666;
+                font-size: 1em;
+                font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+                text-align: justify;
+                
+                
+            }
+            
+            h1, h2, h3 {
+                
+                color: #292;
+                font-family: Baskerville, "Palatino Linotype", times, serif;
+                border-top: solid;
+                border-top-width: 2px;
+                border-top-color: #063;
+                padding-top: 7px;
+                padding-left: 100px;
+                
+            }
+            
+            .atencion {
+                
+                color: #000;
+                border: 2px dashed #F60;;
+                background-color: rgb(255, 255, 255);
+                margin-top: 25px;
+                margin-bottom: 35px;
+                padding: 20px;
+                
+            }
+            
+            .atencion strong {
+                
+                color: #F60;
+                
+            }
+            
+            #cuerpo {
+                
+                background-color: #FF9;
+                background-image: url(imagenes/fondo.jpg);
+                background-repeat: repeat-y; 
+                background-position: center top; 
+                width: 760px;
+                margin: 0 auto; 
+                
+            }
+            
+            h1+p {  
+                
+                color: #F60;
+                font-size: 1.2em;
+                line-height: 140%; 
+                margin-top: 20px;
+                
+            }
+            

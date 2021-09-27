@@ -1,0 +1,65 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+	padding: 0; 
+	margin: 0;  
+	font-size: 100%;
+	font-weight: normal;
+   }
+
+img{
+	width:"760";
+	 height:"198"
+}
+
+html{
+	background-color:#6CC;
+}
+body{
+	background-color:#FFF;
+	border: 3px soli #009;
+	width:760px;
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:15px;
+	
+}
+
+
+
+h1{
+	font-size:44px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	letter-spacing:1px;
+	color:#006;
+	text-transform:uppercase;
+	background-color:rgb(0, 153, 255);
+	padding:5px 15px 2px 15px;
+	margin:0 -15px 20px -15px; 
+}
+h2{
+	font-size:22px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#03F;
+	border-top:2px dotted #30C;
+	border-bottom:2px dotted #30C;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin:15px  5px 0;
+	overflow:hidden; 
+} 
+
+#lateral{
+	width:30%;
+	float:right;
+	background:rgb(20, 159, 163);
+	border:1px double #009;
+	padding:10px 15px;
+	margin:8px ;
+	border-top:20px solid  #009;
+}
+
+#lateral h2{
+	border:none;
+	margin-top:0;
+	padding:0;
+}

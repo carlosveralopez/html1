@@ -1,0 +1,48 @@
+id primer div principal
+flotante a la izq
+tamaño 580px
+alineación del texto justificado
+
+id segundo div lateral
+margen a la derecha 600px
+padding 15px
+color de fondo #E1CDFF
+
+formato para el body
+margen 0 auto
+padding superior 100px
+color del texto #b1967c
+tipo de letra palatino
+fondo:#E1CDFF url(images/fondo_cuerpo.png) repeat-x;
+tamaño 800px
+
+formatos para H1
+tamaño 3 em
+letra arial
+
+formato h2
+tamaño de letra 2,3 em
+color #600
+margen superior 5px
+
+selector descendiente h2 de principal
+color #E8A064
+body superior 2px #FFF slido
+background:url(images/flor.png) no-repeat
+padding izq 80px
+padding botton 2px
+
+Párrafo introducción recibe estilos desde varios sitios descendente de principal	
+color de texto #616161
+tipo de letra Palatino
+tamaño 1,1em
+margin botton 10px
+margin izq 80px
+altura de línea 150%
+
+El párrafo introducción tiene estilos propios, selector descendente con id en el párrafo introducción
+color texto #000s
+letra Arial
+tamaño 1,2em
+margen izq 0px
+margen botton 25px

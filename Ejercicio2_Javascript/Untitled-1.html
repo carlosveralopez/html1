@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<html>
+
+<head>
+    <title>Concurso HTML</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="CSS/pagina1.css">
+    <script src="navbar.js"></script>
+    <div id="navbar"></div>
+
+    <div class=b>
+
+        <h1 class=c>Ejemplo de Formulario</h1>
+        <h3 class=c>A continuación veremos un ejemplo de Formulario:</h3>
+
+        <form action="WS/GestionConsultas.php" method="POST" position="center" class="b">
+
+            <label>ID:</label><input class=s input placeholder="Escriba aqui" autofocus="true" name="id"
+                id="id" type="text"><br><br>
+            <label>Nombre:</label><input class=s input placeholder="Escriba aqui" autofocus="true" name="nombre"
+                id="nombre" type="text"><br><br>
+            <label>Apellidos:</label><input class=s placeholder="Escriba aqui" name="apellido" id="apellido"
+                type="text"><br><br>
+            <label>Email:</label><input class=s placeholder="Escriba aqui" name="email" id="email" type="text"><br><br>
+            <label>Telefono:</label><input class=s placeholder="Escriba aqui" name="telefono" id="telefono"
+                type="text"><br><br>
+            <label>Elige el sexo:</label>
+
+            <label>
+                <input type="radio" class=s name="sexo" id="sexo" value="hombre"> Mujer
+            </label>
+            <label>
+                <input type="radio" class=s name="sexo" id="sexo" value="mujer"> Hombre
+            </label>
+            <br>
+
+            <input type="submit" class=s value="Buscar" name="get">
+            <input type="submit" class=s value="Insertar" name="crear">
+            <input type="submit" class=s value="Borrar" name="del">
+            <input type="submit" class=s value="Modificar" name="modif">
+
+        </form>
+
+    </div>
+</body>
+
+</html>

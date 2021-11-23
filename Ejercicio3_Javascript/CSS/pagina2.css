@@ -1,0 +1,76 @@
+body{
+    background-color: #ffa724;
+   
+    border-width: 30px;
+    border-style: groove;
+    border-color: rgb(255, 153, 0);
+    
+}
+.form{
+    border-width: 20px;
+    border-style: groove;
+    border-color: rgb(255, 153, 0);
+    padding: 1%;
+    
+    
+}
+.tabl :read-only{
+    display:none;
+}
+.a{
+    color: #772d05; 
+}
+.b{
+    background-color: #ffa32a; 
+    padding:2%
+}
+.c{
+    color: #772d05; 
+}
+.d{
+    background-color: #ffa724;
+    padding:2%
+}
+.s{
+    background-color: #ffa724;
+    color: #772d05;
+}
+.buton{
+    background-color: #ffa724;
+    color: #772d05;
+    margin: 1%;
+}
+.x{
+    background-color: #ffa724;
+}
+#cabecera{
+    margin-top:0%;
+    padding:1%;
+    padding-left: 0px;
+    
+}
+#cabecera ul{
+    list-style-type: none;
+    text-align: left;
+    
+ }
+ #cabecera ul li{
+    display: inline;
+    text-align: left;
+    margin: 0 10px 0 0;
+ }
+ #cabecera ul li a {
+    padding: 4px 9px 4px 9px;
+    color: #772d05;
+    background-color: #fa9b0d;;
+    
+    text-decoration: none;
+    border-width: 8px;
+    border-style: groove;
+    border-color: rgb(255, 153, 0);
+    
+ }
+ #cabecera ul li a:hover{
+    background-color: #772d05;
+    color: #ffa724;;
+ }

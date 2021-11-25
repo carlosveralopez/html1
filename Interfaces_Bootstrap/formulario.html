@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="formulario.html">formulario</a></li>
+            <li><a href="tabla.html">tabla</a></li>
+            <li><a href="imagen.html">imagen</a></li>
+            <li><a href="listado.html">listado</a></li>
+            <li><a href="textos.html">textos</a></li>
+            <li><a href="alert.html">alert</a></li>
+        </ul>
+    </nav>
+
+    <form action="WS/crearUsuario.php" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="nombre"><br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" class="apellido"><br>
+
+        <label for="contraseña">Contraseña</label>
+        <input type="text" id="contraseña" name="contraseña" class="contraseña"><br>
+
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono" class="telefono"><br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="email"><br>
+        
+
+        <div>Sexo</div>
+        <input type="radio" id="sexo" name="sexo" class="sexo" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="sexo" name="sexo" class="sexo" value="femenino">
+        <label for="femenino">Femenino</label><br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

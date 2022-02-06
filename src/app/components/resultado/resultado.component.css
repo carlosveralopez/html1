@@ -1,0 +1,26 @@
+.fondoItem {
+    background-color: rgba(255, 17, 21, 0.253);
+    height: 430px;
+    border-radius: 10px;
+    color: white;
+}
+
+.resultado {
+    color:forestgreen;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.resultadonumero {
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 40px 0;
+}
+
+.interpretacion {
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+}

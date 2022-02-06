@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4 mt-4">
+            <div class="col mt-4">
+                <div class="row-lg-12 mt-4">
+
+                    <div class="fondoItem">
+                        <div class="contenedor ">
+                            <h4>Historial de pesos</h4>
+                            <p [(ngModel)]="history">{{history}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="fondoItem">
+                        <div class="contenedor ">
+                            <p>Nombre</p>
+
+                            <input type="text" class="text" id="name" value="{{nombre}}" [(ngModel)]="nombre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="fondoItem">
+                        <div class="contenedor sexo" (click)="masculino()" [ngClass]="{'sexoactive': sexo === 'M'}">
+                            <i class="fas fa-mars fa-3x"></i>
+                            <p>Masculino</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">                                                                             
+                    <div class="fondoItem">
+                        <div class="contenedor sexo" (click)="femenino()" [ngClass]="{'sexoactive': sexo === 'F'}">
+                            <i class="fas fa-venus fa-3x"></i>
+                            <p>Femenino</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="fondoItem">
+                        <div class="contenedor">
+                            <p>Peso</p>
+                            <div class="estiloNumero">{{peso}}</div>
+                            <div>
+                                <i class="fas fa-minus mr-2 sumaresta" (click)="peso = peso - 1"></i>
+                                <i class="fas fa-plus sumaresta" (click)="peso = peso + 1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fondoItem">
+                        <div class="contenedor">
+                            <p>Altura</p>
+                            <div class="estiloNumero">{{altura}}<span>cm</span></div>
+                            <input type="range" class="form-range custom-range" id="customRange1" [(ngModel)]="altura" min="0" max="240">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block btn-color rounded-pill" (click)="calcularBMI()">CALCULAR</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

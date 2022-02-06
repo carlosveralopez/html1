@@ -1,0 +1,44 @@
+.fondoItem {
+    background-color: rgba(255, 17, 21, 0.253);
+    height: 130px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.estiloNumero {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: -20px;
+}
+
+.estiloNumero span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.form-range {
+    width: 90%;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #ff3366;
+}
+
+.sumaresta {
+    background-color: #ff33668a;
+    padding: 4px;
+    border-radius: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.sumaresta:hover {
+    background-color: #ff3366;
+}
+
+.sexoactive {
+    border:2px solid #ff3366;
+    border-radius: 10px;
+}

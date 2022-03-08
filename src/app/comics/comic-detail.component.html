@@ -1,0 +1,12 @@
+<div *ngIf="comic" class="bio">
+    <div class="bio-image">
+        <img [src]="comicService.imageUrl(comic)" />
+    </div>
+
+    <div class="bio-content">
+        <h1 class="bio-name">{{ comic.title }}</h1>
+        <p class="bio-desc">Descripción: {{ comic.description }}</p>
+    </div>
+
+
+</div>

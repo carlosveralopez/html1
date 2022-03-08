@@ -1,0 +1,35 @@
+.comic-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
+    grid-column-gap: 12px;
+}
+
+.comic-item {
+    min-height: 240px;
+    padding: 12px;
+}
+
+.comic-item img {
+    width: 100%;
+    max-width: 100%;
+    min-height: 143px;
+}
+
+button {
+    background-color: bisque;
+    border: 2px solid rgb(189, 170, 147);
+    border-radius: 12px 12px 12px 12px;
+}
+
+.page-panel {
+    background-color: wheat;
+    border-radius: 20px;
+    border: 2px solid rgb(189, 170, 147);
+}
+
+.comic-item h4 {
+    font-size: 14px;
+    padding: 1rem 0;
+    text-align: center;
+}

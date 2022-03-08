@@ -1,0 +1,18 @@
+<section>
+    <div *ngIf="currentPage" class="page-panel">
+        <button (click)="goToPrevPage()" [disabled]="currentPage <= 1">
+      &lt; Anterior
+    </button>
+        <span>{{ currentPage }}/{{ totalPageCount }}</span>
+        <button (click)="goToNextPage()">Siguiente &gt;</button>
+    </div>
+    <div class="hero-list">
+        <div *ngFor="let hero of heroes" class="hero-item">
+            <a routerLink="/heroes/{{ hero.id }}">
+                <span class="badge">
+                    <p>{{ hero.id }}</p>
+                  </span> {{ hero.name }}
+            </a>
+        </div>
+    </div>
+</section>

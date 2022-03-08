@@ -1,0 +1,50 @@
+.hero-list {
+    width: 70%;
+    margin-right: 140px;
+}
+
+.hero-item {
+    background: #eeeeee;
+    margin: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+}
+
+button {
+    background-color: bisque;
+    border: 2px solid rgb(189, 170, 147);
+    border-radius: 12px 12px 12px 12px;
+}
+
+.page-panel {
+    background-color: wheat;
+    border-radius: 20px;
+    border: 2px solid rgb(189, 170, 147);
+}
+
+.badge {
+    display: inline-block;
+    background: #405061;
+    font-weight: bold;
+    color: #fff;
+    height: 100%;
+    width: 80px;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.badge p {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hero-item h4 {
+    font-size: 10px;
+    text-align: center;
+}

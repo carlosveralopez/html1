@@ -1,0 +1,20 @@
+.page-panel {
+    text-align: center;
+    padding: 1em;
+}
+
+.page-panel button {
+    font-size: 1em;
+    padding: 0 12px;
+    color: #e391b3;
+}
+
+.page-panel button:hover {
+    text-decoration: underline;
+}
+
+.page-panel button:disabled {
+    color: #e391b355;
+    text-decoration: none;
+    cursor: none;
+}

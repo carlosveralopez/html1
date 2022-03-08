@@ -1,0 +1,29 @@
+.hero-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
+    grid-column-gap: 12px;
+}
+
+.hero-item {
+    min-height: 240px;
+    padding: 12px;
+}
+
+.hero-item img {
+    width: 100%;
+    max-width: 100%;
+    min-height: 143px;
+}
+
+.page-panel {
+    border: 2px solid rgb(189, 170, 147);
+    background-color: wheat;
+    border-radius: 20px;
+}
+
+.hero-item h4 {
+    font-size: 14px;
+    padding: 1rem 0;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+<section>
+    <div *ngIf="currentPage" class="page-panel">
+        <button (click)="goToPrevPage()" [disabled]="currentPage <= 1">
+      &lt; Anterior
+    </button>
+        <span>{{ currentPage }}/{{ totalPageCount }}</span>
+        <button (click)="goToNextPage()">Siguiente &gt;</button>
+    </div>
+
+    <div class="comic-list">
+        <div *ngFor="let comic of comics" class="comic-item">
+            <a routerLink="/comics/{{ comic.id }}">
+                <div>
+                    <img [src]="comicService.thumbnailUrl(comic)" alt="" />
+                </div>
+                <div class="comic-content">
+                    <h4>{{ comic.title }}</h4>
+
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

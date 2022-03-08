@@ -1,0 +1,13 @@
+<div *ngIf="hero" class="bio">
+    <div class="bio-image">
+        <img [src]="heroService.imageUrl(hero)" />
+    </div>
+
+    <div class="bio-content">
+        <h1 class="bio-name">{{ hero.name }}</h1>
+        <p class="bio-desc">ID: {{ hero.id }}</p>
+        <p class="bio-desc">{{ hero.description }}</p>
+    </div>
+
+
+</div>

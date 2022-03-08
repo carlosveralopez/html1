@@ -1,0 +1,71 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.body {
+    background-color: bisque;
+}
+
+header {
+    background-color: rgb(161, 131, 96);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 10001;
+    padding: 0 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list {
+    display: flex;
+    margin-left: 10;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 14px;
+}
+
+.nav-list a:first-child {
+    border-top-right-radius: 4;
+    border-bottom-right-radius: 4;
+}
+
+.nav-list a:not(:first-child):not(:last-child) {
+    border-radius: 4;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav-list a:last-child {
+    border-top-left-radius: 4;
+    border-bottom-left-radius: 4;
+}
+
+.nav-list a.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.links {
+    width: 160px;
+}
+
+.tab-content {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    min-height: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0.5em 1em 0.5em;
+}

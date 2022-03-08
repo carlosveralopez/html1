@@ -1,0 +1,49 @@
+.bio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bio-image {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 5rem;
+    right: 2rem;
+    height: auto;
+    max-width: 300px;
+}
+
+.bio-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.bio-content {
+    flex: 1 0 auto;
+    position: relative;
+    max-width: 640px;
+    min-height: 540px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.bio-name {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.bio-desc {
+    margin-top: 40px;
+}
+
+.bio-desc {
+    width: 50%;
+}

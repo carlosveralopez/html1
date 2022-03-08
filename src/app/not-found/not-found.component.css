@@ -1,0 +1,19 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found h1 {
+  color: #FB0042;
+}
+
+.image-unicorn {
+  background-image: url("http://i.annihil.us/u/prod/marvel/i/mg/b/40/4c0035bc1dcf1.jpg");
+  width: 200px;
+  height: 200px;
+  margin-top: 24px;
+  border-radius: 100px;
+  box-shadow: 0 0 16px 16px #04413F inset;
+  background-color: #04413F;
+}

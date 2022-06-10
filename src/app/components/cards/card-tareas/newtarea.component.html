@@ -1,0 +1,156 @@
+<div class="flex flex-wrap mt-4">
+    <div class="w-full mb-12 px-4">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded" [ngClass]="color === 'text-black' ? 'bg-white' : 'bg-red-900 text-black'">
+            <div class="rounded-t mb-0 px-4 py-3 border-0">
+                <div class="flex flex-wrap items-center">
+                    <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                        <h3 class="font-semibold text-lg" [ngClass]="color === 'text-white' ? 'text-blueGray-700' : 'text-white'">
+                            Tareas: Asignar Tarea a {{user.nombre}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="block w-full overflow-x-auto">
+                <!-- Tabla productos -->
+                <table class="items-center w-full bg-transparent border-collapse">
+                    <div [formGroup]="newForm" (ngSubmit)="onCreate(newForm.value)">
+                        <thead>
+                            <tr>
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-black'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                    Usuario
+                                </th>
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+                    color === 'text-black'
+                      ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                      : 'bg-red-800 text-red-300 border-red-700'
+                  ">
+                                    Asunto
+                                </th>
+
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-black'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                    Descripcion
+                                </th>
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-black'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                    Hora
+                                </th>
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-black'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                    Fecha
+                                </th>
+
+
+                                <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+                    color === 'text-black'
+                      ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                      : 'bg-red-800 text-red-300 border-red-700'
+                  ">
+                                    Asignar Tarea
+                                </th>
+
+
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left ">
+                                    <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+
+
+                                    <div class="md:flex hidden flex-row flex-wrap items-center ">
+                                        <div class="relative text-white flex w-full flex-wrap items-stretch">
+                                            {{user.nombre}}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left ">
+                                    <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+
+
+                                    <div class="md:flex hidden flex-row flex-wrap items-center ">
+                                        <div class="relative flex w-full flex-wrap items-stretch">
+
+                                            <input formControlName="asunto" type="text" placeholder="Asunto" class="border-0  text-white relative bg-red-800 rounded text-sm shadow outline-none focus:outline-none focus:ring min-w-0 pl-5" />
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left ">
+                                    <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+
+
+                                    <div class="md:flex hidden flex-row flex-wrap items-center ">
+                                        <div class="relative flex w-full flex-wrap items-stretch">
+
+                                            <input formControlName="descripcion" type="text" placeholder="Descripcion" class=" border-0  text-white relative bg-red-800 rounded text-sm shadow outline-none focus:outline-none focus:ring min-w-0 pl-5" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left ">
+                                    <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+
+
+                                    <div class="md:flex hidden flex-row flex-wrap items-center ">
+                                        <div class="relative flex w-full flex-wrap items-stretch">
+
+                                            <input formControlName="hora" type="text" placeholder="Hora" class="border-0  text-white relative bg-red-800 rounded text-sm shadow outline-none focus:outline-none focus:ring min-w-0 pl-5" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left ">
+                                    <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+
+
+                                    <div class="md:flex hidden flex-row flex-wrap items-center ">
+                                        <div class="relative flex w-full flex-wrap items-stretch">
+
+                                            <input formControlName="fecha" type="text" placeholder="Fecha" class="border-0  text-white relative bg-red-800 rounded text-sm shadow outline-none focus:outline-none focus:ring min-w-0 pl-5" />
+                                        </div>
+                                    </div>
+                                </td>
+
+
+
+
+
+                                <td>
+                                    <button (click)="onCreate(newForm.value)" class="bg-red-800 text-blueGray-100 active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
+                       Asignar Tarea
+                      </button>
+                                </td>
+
+                            </tr>
+
+
+
+
+
+
+
+
+
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

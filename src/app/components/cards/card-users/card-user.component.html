@@ -1,0 +1,142 @@
+<div class=" bg-blueGray-600 flex flex-wrap mt-4">
+    <div class="w-full mb-12 px-4">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded" [ngClass]="color === 'text-white' ? 'bg-blueGray-200' : 'bg-red-900 text-white'">
+            <div class="rounded-t mb-0 px-4 py-3 border-0">
+                <div class="flex flex-wrap items-center">
+                    <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                        <h3 class="font-semibold text-lg" [ngClass]="color === 'text-white' ? 'text-black' : 'text-white'">
+                            Trabajadores
+                        </h3>
+                    </div>
+                    <button class="bg-red-800 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button" [routerLink]="['/admin/newuser']" routerLinkActive
+                        #adminDashboard="routerLinkActive" [ngClass]="adminDashboard.isActive">
+               Crear Usuario
+              </button>
+                </div>
+            </div>
+            <div class="block w-full overflow-x-auto">
+                <!-- Tabla productos -->
+                <table class="items-center w-full border-collapse">
+                    <thead class="bg-blueGray-600">
+                        <tr class="bg-blueGray-600">
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+                    color === 'text-white'
+                      ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                      : 'bg-red-800 text-red-300 border-red-700'
+                  ">
+                                ID
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-white'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Nombre
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-white'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Apellido
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-white'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                email
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+                    color === 'text-white'
+                      ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                      : 'bg-red-800 text-red-300 border-red-700'
+                  ">
+                                Rol
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-white'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Tareas
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'text-white'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Ver mas
+                            </th>
+
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+      color === 'text-white'
+        ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+        : 'bg-red-800 text-red-300 border-red-700'
+    ">
+
+                                <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
+                                    <div class="relative flex w-full flex-wrap items-stretch">
+                                        <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"><i class="fas fa-search"></i
+      ></span>
+                                        <input type="text" placeholder="Search here..." class="border-0 px-3 py-3 placeholder-blueGray-300 text-white relative bg-red-900 rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
+                                    </div>
+                                </form>
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let user of users'>
+                            <th scope="row" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                                <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+                                <span class="ml-3 font-bold" [ngClass]="color === 'text-white' ? 'text-blueGray-600' : 'text-white'">
+              {{user.id}}
+            </span>
+                            </th>
+                            <td class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{user.nombre}}
+                            </td>
+                            <td class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{user.apellido}}
+                            </td>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{user.email}}
+
+                            </td>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{user.id_rol}}
+
+                            </td>
+                            <td>
+                                <button (click)="tareas(user.id)" class="bg-red-800 text-blueGray-100 active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button" [routerLink]="['/admin/tareas']"
+                                    routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="
+        adminDashboard.isActive
+      ">
+                       Tareas
+                      </button>
+                            </td>
+                            <td>
+                                <button (click)="vermas(user.id)" class="bg-red-800 text-blueGray-100 active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button" [routerLink]="['/admin/masuser']"
+                                    routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="
+        adminDashboard.isActive
+      ">
+                       Ver mas
+                      </button>
+                            </td>
+                        </tr>
+
+
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

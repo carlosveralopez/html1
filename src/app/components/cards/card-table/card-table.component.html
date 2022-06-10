@@ -1,0 +1,116 @@
+<div class="bg-blueGray-600 flex flex-wrap mt-4">
+    <div class="w-full mb-12 px-4">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded" [ngClass]="color === 'gray' ? 'bg-white' : 'bg-red-900 text-white'">
+            <div class="rounded-t mb-0 px-4 py-3 border-0">
+                <div class="flex flex-wrap items-center">
+                    <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                        <h3 class="font-semibold text-lg" [ngClass]="color === 'gray' ? 'text-blueGray-700' : 'text-white'">
+                            Productos
+                        </h3>
+                    </div>
+                    <button class="bg-red-800 text-blueGray-100 active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button" [routerLink]="['/admin/newproduct']"
+                        routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="adminDashboard.isActive">
+               Crear Producto
+              </button>
+                </div>
+            </div>
+            <div class="block w-full overflow-x-auto">
+                <!-- Tabla productos -->
+                <table class="items-center w-full bg-transparent border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+                    color === 'gray'
+                      ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                      : 'bg-red-800 text-red-300 border-red-700'
+                  ">
+                                ID
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'gray'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Nombre/Categoria
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'gray'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Precio
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'gray'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Cantidad
+                            </th>
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+              color === 'gray'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+                                Ver mas
+                            </th>
+
+                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left" [ngClass]="
+      color === 'gray'
+        ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+        : 'bg-red-800 text-red-300 border-red-700'
+    ">
+
+                                <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
+                                    <div class="relative flex w-full flex-wrap items-stretch">
+                                        <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"><i class="fas fa-search"></i
+      ></span>
+                                        <input type="text" placeholder="Search here..." class="border-0 px-3 py-3 placeholder-blueGray-300 text-white relative bg-red-900 bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
+                                    </div>
+                                </form>
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let product of productos'>
+                            <th scope="row" class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                                <!--<img src="assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />-->
+                                <span class="ml-3 font-bold" [ngClass]="color === 'gray' ? 'text-blueGray-600' : 'text-white'">
+              {{product.id}}
+            </span>
+                            </th>
+                            <td class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{product.nombre}}
+                            </td>
+                            <td class=" border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{product.precio}}
+                            </td>
+                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                {{product.cantidad}}
+
+                            </td>
+                            <td>
+                                <button (click)="vermas(product.id)" class="bg-red-800 text-blueGray-100 active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button"
+                                    [routerLink]="['/admin/product']" routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="
+        adminDashboard.isActive
+      ">
+                       Ver mas
+                      </button>
+                            </td>
+                        </tr>
+
+
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

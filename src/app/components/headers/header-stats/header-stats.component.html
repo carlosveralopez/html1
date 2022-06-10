@@ -1,0 +1,16 @@
+<div class="relative  bg-blueGray-800 md:pb-20 pb-20 pt-20">
+    <div class="px-20 md:px-10 mx-auto w-full">
+        <div>
+
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 mt-4 xl:w-3/12 px-4" id="panel" routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="
+        adminDashboard.isActive
+      ">
+
+                    <app-card-stats statSubtitle="localStorage.getItem(rol)" statTitle="localStorage.getItem(rol)" statDescripiron="" statIconName="fas fa-table " statIconColor=" bg-red-800 "></app-card-stats>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+<app-admin-navbar></app-admin-navbar>
+<main class="product-page">
+    <section class="mt-32 h-20">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover">
+            <span id="blackOverlay" class="w-full h-full absolute opacity-50 "></span>
+        </div>
+
+    </section>
+    <section class="relative py-16 ">
+        <div class="container mx-auto px-4">
+            <div class="relative flex flex-col min-w-0 break-words bg-red-900 w-full mb-6 shadow-xl rounded-lg -mt-64">
+                <div class="px-6">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                            <div class="relative">
+                                <img alt="..." src="assets/img/perfilee.jpg" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" />
+                            </div>
+
+                        </div>
+
+                        <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                            <div class="py-6 px-3 mt-32 sm:mt-0">
+                                <div class="flex flex-wrap justify-end ">
+
+                                    <!------------------------------------------------------------------------------<BOTONES>----------------------------------------------------------------------------->
+                                    <button id="delete-btn" class="bg-red-800 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                        <i class="fas fa-tools mr-1 text-lg text-blueGray-50"></i> Editar
+                      </button>
+
+                                    <button (click)="onDelete()" class="bg-red-800 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                        <i class="fas fa-tools mr-1 text-lg text-blueGray-50"></i> Eliminar
+      </button>
+                                    <!------------------------------------------------------------------------------</BOTONES>----------------------------------------------------------------------------->
+
+
+
+                                    <!-----------------------------------------------------------------------------<BOTON EDITAR>----------------------------------------------------------------------------->
+
+                                    <div class="bg-red-800 absolute inset-0 hidden justify-center items-center" id="overlay">
+                                        <div class="bg-bluegray-600 bg-opacity-50 max-w-sm py-2 px-3  text-blueGray-100">
+                                            <div class="flex justify-between items-center ">
+                                                <h1 class="text-lg font-bold">Editar</h1>
+
+
+                                            </div>
+                                            <br>
+                                            <form [formGroup]="updateForm" (ngSubmit)="onUpdate(updateForm.value)">
+                                                <div class="flex items-center flex-row flex-wrap">
+
+                                                    <div class="md:flex hidden  items-center lg:ml-auto mr-3">
+                                                        <h5 class="text-lg mr-4">Cantidad</h5>
+                                                        <div class="relative flex w-full flex-wrap items-stretch">
+                                                            <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                          </span>
+                                                            <input formControlName="cantidad" type="text" placeholder="Cantidad" class="border-0 px-3 py-3 placeholder-blueGray-300 text-white relative bg-red-900 rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-20" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="flex items-center flex-row flex-wrap">
+
+                                                    <div class="md:flex hidden  items-center lg:ml-auto mr-3">
+                                                        <h5 class="text-lg mr-4">Precio</h5>
+                                                        <div class="relative flex w-full flex-wrap items-stretch">
+                                                            <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                          </span>
+                                                            <input formControlName="precio" type="text" placeholder="Precio" class="border-0 px-3 py-3 placeholder-blueGray-300 text-white relative bg-red-900 rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-20" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+
+                                                <div class="mt-3 flex justify-end space-x-3">
+                                                    <button type="button" class="ml-auto mr-auto px-3 rounded bg-red-900 text-white hover:bg-red-600" id="close-modal">Cancelar</button>
+                                                    <button type="submit" class="m-auto mr-auto px-3 py-1 bg-red-900 text-white hover:bg-red-600 rounded">Guardar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------------------------------------------------------------------------</BOTON EDITAR>----------------------------------------------------------------------------->
+
+                        <!--------------------------------------------------------------------------------------<BOTON FACTURAR>---------------------------------------------------------------------------->
+
+
+
+                        <!------------------------------------------------------------------------------</BOTON FACTURAR>----------------------------------------------------------------------------->
+
+
+                        <div class="w-full lg:w-4/12 px-4 lg:order-1">
+
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <h3 class="text-4xl font-semibold leading-normal mb-2 text-white mb-2">
+                            {{productos.nombre}}
+                        </h3>
+                        <div class="mb-2 text-blueGray-100 font-semibold mt-10">
+                            <i class="fas fa-circle  mr-2 text-lg text-blueGray-100"></i> Cantidad: {{productos.cantidad}} Unidades
+                        </div>
+                        <div class="mb-2 text-blueGray-100 font-semibold mt-10">
+                            <i class="fas fa-circle mr-2 text-lg text-blueGray-100"></i> Precio: {{productos.precio}} Euros
+                        </div>
+
+                    </div>
+                    <div class="mt-10 py-10 border-t border-red-700 text-center">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-full lg:w-9/12 px-4">
+                                <p class="mb-4 text-lg leading-relaxed font-semibold text-blueGray-100">
+                                    Descripcion: {{productos.descripcion}}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--<app-footer></app-footer>-->
